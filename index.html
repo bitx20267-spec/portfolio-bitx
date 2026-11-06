@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bit-X Soluções</title>
+  <meta name="description" content="Bit-X Soluções: conectando pessoas ao mundo digital.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ CABEÇALHO / MENU ============ -->
+  <header class="topo" id="topo">
+    <a class="marca" href="index.html" aria-label="Bit-X Soluções - página inicial">
+      <!-- Para usar o logo original, troque este <svg> por: <img src="imagens/logo.png" alt="Logo Bit-X"> -->
+      <svg class="logo" viewBox="0 0 48 56" role="img" aria-label="Logo Bit-X">
+        <rect width="48" height="48" fill="#050505"/>
+        <text x="24" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="32" fill="#27d6e0">B</text>
+        <text x="24" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="9" fill="#27d6e0">BIT-X</text>
+      </svg>
+      <span class="marca-nome">Bit-X Soluções</span>
+    </a>
+
+    <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="menu" class="menu" aria-label="Menu principal">
+      <a href="index.html" class="ativo" aria-current="page">Início</a>
+      <a href="produto.html">O produto</a>
+      <a href="papeis.html">Papéis</a>
+      <a href="ciclo-de-vida.html">Ciclo de Vida</a>
+      
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="hex hex-1"></div>
+      <div class="hex hex-2"></div>
+      <div class="hex hex-3"></div>
+      <h1 id="titulo-hero">Conectando pessoas ao mundo digital.</h1>
+    </section>
+
+    <!-- ============ NOME, SIGNIFICADO, PROPÓSITO ============ -->
+    <section class="sobre" aria-labelledby="titulo-sobre">
+      <div class="container sobre-grade">
+        <div class="sobre-logo">
+          <svg class="logo-grande" viewBox="0 0 48 56" role="img" aria-label="Logo Bit-X">
+            <rect width="48" height="48" fill="#050505"/>
+            <text x="24" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="32" fill="#27d6e0">B</text>
+            <text x="24" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="9" fill="#27d6e0">BIT-X</text>
+          </svg>
+        </div>
+        <div class="sobre-texto">
+          <h2 id="titulo-sobre">O Nome, o significado, o propósito.</h2>
+          <p>
+            A logomarca da Bit-X Soluções representa a união entre tecnologia, inovação e eficiência.
+            A letra "B" remete ao conceito de bit, base da computação, enquanto o "X" faz referência ao
+            sistema hexadecimal, simbolizando precisão na resolução de problemas. As cores azul e verde
+            transmitem inovação, crescimento e confiança, e a tipografia moderna reforça o profissionalismo
+            da empresa. Juntos, esses elementos refletem o compromisso da Bit-X em desenvolver soluções
+            tecnológicas inteligentes e confiáveis para seus clientes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NOSSO TIME ============ -->
+    <section class="time" aria-labelledby="titulo-time">
+      <div class="container">
+        <h2 id="titulo-time">Nosso Time</h2>
+
+        <ul class="time-grade">
+          <li class="membro">
+            <div class="foto" data-inicial="R"><img src="imagens/rodrigo.jpg" alt="Foto de Rodrigo" loading="lazy" onerror="this.remove()"></div>
+            <h3>Rodrigo</h3>
+            <p>Gestor de Pessoas<br>Desenvolvedor Back-End</p>
+          </li>
+          <li class="membro">
+            <div class="foto" data-inicial="I"><img src="imagens/ivanilson.jpg" alt="Foto de Ivanilson" loading="lazy" onerror="this.remove()"></div>
+            <h3>Ivanilson</h3>
+            <p>UI Design<br>Gerente de Projeto</p>
+          </li>
+          <li class="membro">
+            <div class="foto" data-inicial="R"><img src="imagens/raynner.jpg" alt="Foto de Raynner" loading="lazy" onerror="this.remove()"></div>
+            <h3>Raynner</h3>
+            <p>UX Designer<br>Back-End</p>
+          </li>
+          
+          
+          <li class="membro">
+            <div class="foto" data-inicial="K"><img src="imagens/kaua.jpg" alt="Foto de Kauã" loading="lazy" onerror="this.remove()"></div>
+            <h3>Kauã</h3>
+            <p>Analista de Qualidade / Segurança</p>
+          </li>
+         
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="rodape">
+    <div class="container">
+      <p>© <span id="ano">2026</span> Bit-X Soluções. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Menu do celular
+    const botao = document.getElementById('menuBotao');
+    const menu = document.getElementById('menu');
+    botao.addEventListener('click', () => {
+      const aberto = menu.classList.toggle('aberto');
+      botao.setAttribute('aria-expanded', aberto);
+    });
+
+    // Cabeçalho ganha fundo ao rolar a página
+    const topo = document.getElementById('topo');
+    const atualizaTopo = () => topo.classList.toggle('rolou', window.scrollY > 40);
+    window.addEventListener('scroll', atualizaTopo, { passive: true });
+    atualizaTopo();
+
+    // Ano automático no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
