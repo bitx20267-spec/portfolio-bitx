@@ -144,7 +144,7 @@ ol { list-style: none; }
 .projeto-btn{
     width: 220px;
     background-color: transparent;
-    border: solid 1px var(--corPrincipal);
+    border: solid 1px #d6def5;
     border-radius: 4px;
     padding: 12px 20px;
     color: var(--corTerciaria);
@@ -152,6 +152,7 @@ ol { list-style: none; }
     font-family: var(--fontePrincipal);
     font-weight: 600;
     text-align: center;
+    margin-top: 30px;
 }
 .intro { margin-top: 12px; max-width: 700px; color: var(--texto-suave); font-size: 1.05rem; }
 
